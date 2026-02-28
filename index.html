@@ -130,12 +130,6 @@ src="https://www.facebook.com/tr?id=1230863965778693&ev=PageView&noscript=1"
 
   if (!isMobile) return;
 
-  // Create a small hint bar (keeps your page as fallback)
-  const hint = document.createElement('div');
-  hint.style.cssText = "position:fixed;left:0;right:0;bottom:0;padding:12px 14px;background:rgba(0,0,0,.55);color:#fff;font:14px/1.35 system-ui;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);z-index:9999;text-align:center";
-  hint.textContent = "Если Telegram не открылся автоматически — нажмите кнопку «Start Bot»";
-  document.addEventListener("DOMContentLoaded", () => document.body.appendChild(hint));
-
   // Best-effort attempt to open the Telegram app.
   // Some in-app browsers / iOS may still require a user tap or show a confirmation prompt.
   setTimeout(() => {
